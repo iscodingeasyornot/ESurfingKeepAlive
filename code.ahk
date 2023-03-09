@@ -1,10 +1,10 @@
-setTimer("initCheck",45000)
+setTimer("initCheck",30000)
 Thread "NoTimers", 1
 initCheck()
 
 initCheck(){
-    if (!checkConnection(1500)){
-        if (!checkConnection(3000)){
+    if (!checkConnection(1000)){
+        if (!checkConnection(2000)){
             if (!checkConnection(1000)){
                 restartAndDial()
             }
@@ -16,13 +16,13 @@ restartAndDial(){
     try processClose("ESurfingClient.exe")
     try processClose("SelfDebugTool.exe")
     run "C:\Program Files (x86)\Chinatelecom_JSPortal\ESurfingClient.exe"
-    sleep(8000)
+    sleep(4000)
     clickDialButton()
     c := 0
-    sleep(4000)
+    sleep(2000)
     while ((!checkConnection(2000)) & (c<18)){
         clickDialButton()
-        sleep(6000)
+        sleep(3000)
         c := c + 1
     }
 }
