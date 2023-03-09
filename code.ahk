@@ -29,10 +29,6 @@ restartAndDial(){
 
 clickDialButton(){
     try{
-        winClose("ahk_id" winGetID("Windows 安全中心警告 ahk_exe ESurfingClient.exe"))
-        sleep(1000)
-    }
-    try{
         WinGetPos(, , Width, Height, "ahk_exe ESurfingClient.exe")
         X := Width/2
         Y := Height/1.8
