@@ -5,7 +5,7 @@ initCheck()
 initCheck(){
     if (!checkConnection(1500)){
         if (!checkConnection(3000)){
-            if (!checkConnection(4500)){
+            if (!checkConnection(1000)){
                 restartAndDial()
             }
         }
