@@ -39,13 +39,13 @@ clickDialButton(){
 checkConnection(timeOut){
     statusCode := 0
     Captive := ComObjCreate("WinHttp.Winhttprequest.5.1")
-    Captive.open("GET","https://connect.rom.miui.com/generate_204")
+    Captive.open("GET","http://119.29.29.29")
     Captive.setTimeouts(timeOut,timeOut,timeOut,timeOut)
     try {
         Captive.send()
         statusCode := Captive.Status
     }
-    if (statusCode = 204){
+    if (statusCode = 404){
         return 1
     }
     else{
